@@ -23,4 +23,6 @@ RUN unzip /tmp/sonarscanner.zip -d /usr/lib/ && \
     rm /tmp/sonarscanner.zip && \
     sed -i 's/use_embedded_jre=true/use_embedded_jre=false/g' /usr/lib/sonar-scanner/bin/sonar-scanner
 
+ENV NODE_PATH "/usr/local/lib/node_modules/"
+
 ENTRYPOINT ["/bin/bash"]
